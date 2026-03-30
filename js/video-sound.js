@@ -1,7 +1,15 @@
 export function initVideoSound() {
   const videoGroups = document.querySelectorAll(".video-frame, .hero__video-stage");
-
   let activeVideo = null;
+
+  const updateUI = (video, toggle, icon) => {
+    const isMuted = video.muted;
+
+    toggle.classList.toggle("is-muted", isMuted);
+    toggle.setAttribute("aria-pressed", String(!isMuted));
+    toggle.setAttribute("aria-label", isMuted ? "Unmute video" : "Mute video");
+    icon.textContent = isMuted ? "🔇" : "🔊";
+  };
 
   videoGroups.forEach((group) => {
     const video = group.querySelector("[data-video]");
@@ -10,27 +18,21 @@ export function initVideoSound() {
 
     if (!video || !toggle || !icon) return;
 
-    const updateUI = () => {
-      const isMuted = video.muted;
-      toggle.classList.toggle("is-muted", isMuted);
-      icon.textContent = isMuted ? "🔇" : "🔊";
-    };
-
-    updateUI();
+    updateUI(video, toggle, icon);
 
     toggle.addEventListener("click", async () => {
       try {
-        // 👉 如果有其他影片正在播放聲音 → 先關掉
         if (activeVideo && activeVideo !== video) {
           activeVideo.muted = true;
 
           const activeGroup = activeVideo.closest(".video-frame, .hero__video-stage");
           if (activeGroup) {
-            const activeIcon = activeGroup.querySelector("[data-sound-icon]");
             const activeToggle = activeGroup.querySelector("[data-sound-toggle]");
+            const activeIcon = activeGroup.querySelector("[data-sound-icon]");
 
-            if (activeIcon) activeIcon.textContent = "🔇";
-            if (activeToggle) activeToggle.classList.add("is-muted");
+            if (activeToggle && activeIcon) {
+              updateUI(activeVideo, activeToggle, activeIcon);
+            }
           }
         }
 
@@ -41,10 +43,12 @@ export function initVideoSound() {
           activeVideo = video;
         } else {
           video.muted = true;
-          activeVideo = null;
+          if (activeVideo === video) {
+            activeVideo = null;
+          }
         }
 
-        updateUI();
+        updateUI(video, toggle, icon);
       } catch (err) {
         console.error("Video sound toggle error:", err);
       }
