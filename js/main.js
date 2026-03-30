@@ -32,12 +32,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-document.querySelectorAll("[data-sound-toggle]").forEach((btn) => {
-  const video = btn.closest(".video-frame").querySelector("video");
-
-  btn.addEventListener("click", () => {
-    video.muted = !video.muted;
-    btn.textContent = video.muted ? "🔇" : "🔊";
-  });
-});
