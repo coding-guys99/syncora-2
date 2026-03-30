@@ -228,14 +228,38 @@
 
 .video-sound-toggle {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(0,0,0,0.6);
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  top: 16px;
+  left: 16px;
+  z-index: 6;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 999px;
+  background: rgba(6, 10, 16, 0.62);
+  backdrop-filter: blur(10px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
-  font-size: 16px;
-  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.video-sound-toggle:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0,209,255,0.4);
+  background: rgba(10, 18, 28, 0.82);
+}
+
+.video-sound-toggle.is-muted {
+  color: rgba(255,255,255,0.85);
+}
+
+.video-sound-toggle:not(.is-muted) {
+  color: #9beeff;
+  box-shadow: 0 0 18px rgba(0,209,255,0.22);
+}
+
+.video-sound-toggle__icon {
+  font-size: 18px;
+  line-height: 1;
 }
