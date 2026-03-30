@@ -1,5 +1,6 @@
 export function initVideoPlay() {
-  const groups = document.querySelectorAll(".video-frame, .hero__video-stage");
+  const allGroups = document.querySelectorAll(".video-frame, .hero__video-stage");
+  const demoGroups = document.querySelectorAll(".video-frame");
 
   const updatePlayUI = (video, toggle, icon) => {
     const isPlaying = !video.paused;
@@ -11,6 +12,7 @@ export function initVideoPlay() {
 
   const updateProgressUI = (video, progressBar) => {
     if (!progressBar) return;
+
     if (!video.duration || !isFinite(video.duration)) {
       progressBar.style.width = "0%";
       return;
@@ -47,7 +49,7 @@ export function initVideoPlay() {
     }
   };
 
-  groups.forEach((group) => {
+  allGroups.forEach((group) => {
     const video = group.querySelector("[data-video]");
     const playToggle = group.querySelector("[data-play-toggle]");
     const playIcon = group.querySelector("[data-play-icon]");
@@ -61,22 +63,25 @@ export function initVideoPlay() {
     updateProgressUI(video, progressBar);
 
     let isDraggingProgress = false;
+    const isDemoVideo = group.classList.contains("video-frame");
 
     playToggle.addEventListener("click", async () => {
       try {
         if (video.paused) {
-          // Demo 區互斥播放；Hero 不互斥可再另外調整
-          groups.forEach((otherGroup) => {
-            const otherVideo = otherGroup.querySelector("[data-video]");
-            const otherToggle = otherGroup.querySelector("[data-play-toggle]");
-            const otherIcon = otherGroup.querySelector("[data-play-icon]");
+          // 只有 Demo 區影片彼此互斥，Hero 不受影響
+          if (isDemoVideo) {
+            demoGroups.forEach((otherGroup) => {
+              const otherVideo = otherGroup.querySelector("[data-video]");
+              const otherToggle = otherGroup.querySelector("[data-play-toggle]");
+              const otherIcon = otherGroup.querySelector("[data-play-icon]");
 
-            if (!otherVideo || !otherToggle || !otherIcon) return;
-            if (otherVideo !== video) {
-              otherVideo.pause();
-              updatePlayUI(otherVideo, otherToggle, otherIcon);
-            }
-          });
+              if (!otherVideo || !otherToggle || !otherIcon) return;
+              if (otherVideo !== video) {
+                otherVideo.pause();
+                updatePlayUI(otherVideo, otherToggle, otherIcon);
+              }
+            });
+          }
 
           await video.play();
         } else {
@@ -126,6 +131,7 @@ export function initVideoPlay() {
       const endDrag = (event) => {
         if (!isDraggingProgress) return;
         isDraggingProgress = false;
+
         if (event?.clientX != null) {
           seekToPosition(video, progress, progressBar, event.clientX);
         }
