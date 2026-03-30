@@ -1,0 +1,22 @@
+.requirements__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.requirement-card {
+  padding: 20px;
+  text-align: center;
+}
+
+.requirement-card h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.requirements__note {
+  margin-top: 24px;
+  text-align: center;
+  color: rgba(255,255,255,0.6);
+}
