@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initActiveSection();
   initHeroVisual();
   initDemoSwitcher();
+  initVideoSound();
 
   const toggle = document.querySelector("[data-nav-toggle]");
   const menu = document.querySelector("[data-nav-menu]");
