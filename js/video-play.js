@@ -1,6 +1,5 @@
 export function initVideoPlay() {
   const groups = document.querySelectorAll(".video-frame, .hero__video-stage");
-  let activeVideo = null;
 
   const updatePlayUI = (video, toggle, icon) => {
     const isPlaying = !video.paused;
@@ -11,6 +10,7 @@ export function initVideoPlay() {
   };
 
   const updateProgressUI = (video, progressBar) => {
+    if (!progressBar) return;
     if (!video.duration || !isFinite(video.duration)) {
       progressBar.style.width = "0%";
       return;
@@ -20,43 +20,52 @@ export function initVideoPlay() {
     progressBar.style.width = `${percent}%`;
   };
 
+  const seekToPosition = (video, progress, progressBar, clientX) => {
+    if (!video.duration || !isFinite(video.duration)) return;
+
+    const rect = progress.getBoundingClientRect();
+    const offsetX = clientX - rect.left;
+    const ratio = Math.max(0, Math.min(1, offsetX / rect.width));
+
+    video.currentTime = ratio * video.duration;
+    updateProgressUI(video, progressBar);
+  };
+
+  const requestFullscreenFor = async (target) => {
+    if (!target) return;
+
+    try {
+      if (target.requestFullscreen) {
+        await target.requestFullscreen();
+      } else if (target.webkitRequestFullscreen) {
+        target.webkitRequestFullscreen();
+      } else if (target.webkitEnterFullscreen && target.tagName === "VIDEO") {
+        target.webkitEnterFullscreen();
+      }
+    } catch (error) {
+      console.error("Fullscreen error:", error);
+    }
+  };
+
   groups.forEach((group) => {
     const video = group.querySelector("[data-video]");
     const playToggle = group.querySelector("[data-play-toggle]");
     const playIcon = group.querySelector("[data-play-icon]");
     const progress = group.querySelector("[data-progress]");
     const progressBar = group.querySelector("[data-progress-bar]");
+    const expandToggle = group.querySelector("[data-expand-toggle]");
 
     if (!video || !playToggle || !playIcon) return;
 
     updatePlayUI(video, playToggle, playIcon);
+    updateProgressUI(video, progressBar);
 
-    if (progress && progressBar) {
-      updateProgressUI(video, progressBar);
-
-      video.addEventListener("timeupdate", () => {
-        updateProgressUI(video, progressBar);
-      });
-
-      video.addEventListener("loadedmetadata", () => {
-        updateProgressUI(video, progressBar);
-      });
-
-      progress.addEventListener("click", (event) => {
-        if (!video.duration || !isFinite(video.duration)) return;
-
-        const rect = progress.getBoundingClientRect();
-        const clickX = event.clientX - rect.left;
-        const ratio = Math.max(0, Math.min(1, clickX / rect.width));
-        video.currentTime = ratio * video.duration;
-        updateProgressUI(video, progressBar);
-      });
-    }
+    let isDraggingProgress = false;
 
     playToggle.addEventListener("click", async () => {
       try {
-        // 如果目前要播放新影片，先暫停其他影片
         if (video.paused) {
+          // Demo 區互斥播放；Hero 不互斥可再另外調整
           groups.forEach((otherGroup) => {
             const otherVideo = otherGroup.querySelector("[data-video]");
             const otherToggle = otherGroup.querySelector("[data-play-toggle]");
@@ -70,10 +79,8 @@ export function initVideoPlay() {
           });
 
           await video.play();
-          activeVideo = video;
         } else {
           video.pause();
-          if (activeVideo === video) activeVideo = null;
         }
 
         updatePlayUI(video, playToggle, playIcon);
@@ -93,5 +100,48 @@ export function initVideoPlay() {
     video.addEventListener("ended", () => {
       updatePlayUI(video, playToggle, playIcon);
     });
+
+    video.addEventListener("timeupdate", () => {
+      if (!isDraggingProgress) {
+        updateProgressUI(video, progressBar);
+      }
+    });
+
+    video.addEventListener("loadedmetadata", () => {
+      updateProgressUI(video, progressBar);
+    });
+
+    if (progress && progressBar) {
+      progress.addEventListener("pointerdown", (event) => {
+        isDraggingProgress = true;
+        progress.setPointerCapture?.(event.pointerId);
+        seekToPosition(video, progress, progressBar, event.clientX);
+      });
+
+      progress.addEventListener("pointermove", (event) => {
+        if (!isDraggingProgress) return;
+        seekToPosition(video, progress, progressBar, event.clientX);
+      });
+
+      const endDrag = (event) => {
+        if (!isDraggingProgress) return;
+        isDraggingProgress = false;
+        if (event?.clientX != null) {
+          seekToPosition(video, progress, progressBar, event.clientX);
+        }
+      };
+
+      progress.addEventListener("pointerup", endDrag);
+      progress.addEventListener("pointercancel", endDrag);
+      progress.addEventListener("lostpointercapture", () => {
+        isDraggingProgress = false;
+      });
+    }
+
+    if (expandToggle) {
+      expandToggle.addEventListener("click", async () => {
+        await requestFullscreenFor(video);
+      });
+    }
   });
 }
