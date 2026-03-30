@@ -6,6 +6,7 @@ import { initHeroVisual } from "./hero-visual.js";
 import { initDemoSwitcher } from "./demo-switcher.js";
 import { initI18n } from "./i18n.js";
 import { initVideoSound } from "./video-sound.js";
+import { initVideoPlay } from "./video-play.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initI18n();
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeroVisual();
   initDemoSwitcher();
   initVideoSound();
+  initVideoPlay();
 
   const toggle = document.querySelector("[data-nav-toggle]");
   const menu = document.querySelector("[data-nav-menu]");
