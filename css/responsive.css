@@ -118,3 +118,9 @@
     padding-right: 18px;
   }
 }
+
+@media (max-width: 768px) {
+  .requirements__grid {
+    grid-template-columns: 1fr;
+  }
+}
