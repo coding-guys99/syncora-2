@@ -13,39 +13,4 @@ export function initHeroVisual() {
 
     requestAnimationFrame(loop);
   }
-
-  const video = document.querySelector("[data-video]");
-  const toggle = document.querySelector("[data-sound-toggle]");
-  const icon = document.querySelector("[data-sound-icon]");
-
-  if (video && toggle && icon) {
-    const updateSoundUI = () => {
-      const isMuted = video.muted;
-      toggle.classList.toggle("is-muted", isMuted);
-      toggle.setAttribute("aria-pressed", String(!isMuted));
-      toggle.setAttribute(
-        "aria-label",
-        isMuted ? "Unmute video" : "Mute video"
-      );
-      icon.textContent = isMuted ? "🔇" : "🔊";
-    };
-
-    updateSoundUI();
-
-    toggle.addEventListener("click", async () => {
-      try {
-        if (video.muted) {
-          video.muted = false;
-          video.volume = 1;
-          await video.play();
-        } else {
-          video.muted = true;
-        }
-
-        updateSoundUI();
-      } catch (error) {
-        console.error("Failed to toggle video sound:", error);
-      }
-    });
-  }
 }
