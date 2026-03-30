@@ -1,0 +1,19 @@
+.footer {
+  padding: 28px 0 40px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.01);
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  color: var(--color-text-soft);
+}
+
+.footer strong {
+  color: #fff;
+  display: block;
+  margin-bottom: 4px;
+}

@@ -1,0 +1,56 @@
+.cta__box {
+  padding: 56px 32px;
+  overflow: hidden;
+}
+
+.cta__box::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,209,255,0.18), transparent 65%);
+  top: -160px;
+  right: -100px;
+  filter: blur(18px);
+}
+
+.cta__actions,
+.cta__contacts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.cta__actions {
+  margin-top: 28px;
+}
+
+.cta__contacts {
+  margin-top: 24px;
+}
+
+.cta__hint {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+}
+
+.contact-chip {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  transition: all 0.2s ease;
+}
+
+.contact-chip:hover {
+  background: rgba(0,209,255,0.1);
+  border-color: rgba(0,209,255,0.4);
+  color: #fff;
+}

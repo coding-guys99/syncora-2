@@ -1,0 +1,19 @@
+.concept__grid {
+  margin-top: 16px;
+}
+
+.concept-card {
+  padding: 28px;
+  min-height: 240px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.concept-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+}
+
+.concept-card h3 {
+  font-size: 1.26rem;
+  margin-bottom: 12px;
+}

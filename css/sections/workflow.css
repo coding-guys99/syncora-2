@@ -1,0 +1,43 @@
+.workflow {
+  overflow: hidden;
+}
+
+.workflow__line {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: calc(50% + 40px);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,209,255,0.55), rgba(124,92,255,0.5), transparent);
+  pointer-events: none;
+}
+
+.workflow-step {
+  position: relative;
+  padding: 28px;
+  min-height: 230px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.workflow-step:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+}
+
+.workflow-step__num {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.workflow-step h3 {
+  font-size: 1.24rem;
+  margin-bottom: 12px;
+}

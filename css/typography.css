@@ -1,0 +1,56 @@
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+.hero__title {
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 750;
+}
+
+.section-subtitle,
+.hero__subtitle,
+.demo-card__desc,
+.concept-card p,
+.module-card p,
+.solution-card p,
+.workflow-step p,
+.specs__note {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.76);
+  margin-bottom: 18px;
+}
+
+.eyebrow--center {
+  justify-content: center;
+}
+
+.eyebrow__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 18px rgba(0, 209, 255, 0.5);
+}
+
+.text-center {
+  text-align: center;
+}

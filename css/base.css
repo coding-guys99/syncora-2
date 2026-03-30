@@ -1,0 +1,98 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background:
+    radial-gradient(circle at top left, rgba(0, 209, 255, 0.08), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(124, 92, 255, 0.10), transparent 35%),
+    var(--color-bg);
+  font-family: Inter, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+section {
+  position: relative;
+}
+
+.site-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.site-bg__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
+  opacity: 0.28;
+}
+
+.site-bg__noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.35) 0.8px, transparent 0.8px);
+  background-size: 12px 12px;
+}
+
+.site-bg__orb {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.18;
+  animation: orbFloat 14s ease-in-out infinite;
+}
+
+.site-bg__orb--cyan {
+  top: 8%;
+  left: -8%;
+  background: rgba(0, 209, 255, 0.9);
+}
+
+.site-bg__orb--purple {
+  right: -10%;
+  bottom: 0;
+  background: rgba(124, 92, 255, 0.9);
+  animation-delay: -5s;
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

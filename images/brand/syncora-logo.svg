@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="40" viewBox="0 0 180 40" fill="none">
+  <rect width="40" height="40" rx="12" fill="#0F1622"/>
+  <path d="M11 20C11 14.477 15.477 10 21 10H29L24 15H21C18.239 15 16 17.239 16 20C16 22.761 18.239 25 21 25H29L24 30H21C15.477 30 11 25.523 11 20Z" fill="#00D1FF"/>
+  <text x="52" y="26" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="700">Syncora</text>
+</svg>

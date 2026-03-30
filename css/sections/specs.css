@@ -1,0 +1,27 @@
+.spec-panel {
+  padding: 28px;
+  min-height: 100%;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.spec-panel:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+}
+
+.spec-panel__head {
+  margin-bottom: 16px;
+}
+
+.spec-panel__head h3 {
+  font-size: 1.5rem;
+}
+
+.spec-panel__head--muted h3 {
+  color: rgba(255,255,255,0.78);
+}
+
+.specs__note {
+  margin-top: 24px;
+  text-align: center;
+}

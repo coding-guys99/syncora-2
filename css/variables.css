@@ -1,0 +1,43 @@
+:root {
+  --color-bg: #0b0f14;
+  --color-bg-soft: #111824;
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-surface-strong: rgba(255, 255, 255, 0.07);
+  --color-border: rgba(110, 205, 255, 0.18);
+  --color-border-strong: rgba(110, 205, 255, 0.28);
+
+  --color-primary: #00d1ff;
+  --color-secondary: #7c5cff;
+  --color-text: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.72);
+  --color-text-soft: rgba(255, 255, 255, 0.52);
+
+  --gradient-primary: linear-gradient(135deg, #00d1ff 0%, #7c5cff 100%);
+  --gradient-dark: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+
+  --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 40px rgba(0, 209, 255, 0.18);
+  --shadow-glow-strong: 0 0 50px rgba(124, 92, 255, 0.22);
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  --container: 1200px;
+  --nav-h: 84px;
+
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 20px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 48px;
+  --space-9: 64px;
+  --space-10: 88px;
+
+  --transition: 0.3s ease;
+  --transition-slow: 0.6s ease;
+}
