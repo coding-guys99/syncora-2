@@ -5,6 +5,7 @@ import { initActiveSection } from "./active-section.js";
 import { initHeroVisual } from "./hero-visual.js";
 import { initDemoSwitcher } from "./demo-switcher.js";
 import { initI18n } from "./i18n.js";
+import { initVideoSound } from "./video-sound.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initI18n();
@@ -39,3 +40,7 @@ document.querySelectorAll("[data-sound-toggle]").forEach((btn) => {
     btn.textContent = video.muted ? "🔇" : "🔊";
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  initVideoSound();
+})
