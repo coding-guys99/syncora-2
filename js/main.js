@@ -41,7 +41,3 @@ document.querySelectorAll("[data-sound-toggle]").forEach((btn) => {
     btn.textContent = video.muted ? "🔇" : "🔊";
   });
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  initVideoSound();
-})
