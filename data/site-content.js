@@ -132,7 +132,7 @@ export const siteContent = {
 
 "req.format": "建議格式：MP4 / MOV ・ 1080p 以上 ・ 單人畫面",
 "req.privacy": "🔒 素材僅用於評估與建模，不會公開或另作他用",
-"req.note": "不確定素材是否適合？直接傳給我們，我們可以先幫你評估。"
+"req.note": "不確定素材是否適合？直接傳給我們，我們可以先幫你評估。",
 
   "cta.title": "從你的影片開始",
   "cta.subtitle":
