@@ -124,13 +124,17 @@ export function initI18n() {
   applyLanguage(lang);
   initLanguageDropdown();
 
-  const routeMap = {
-    en: "/",
-    zh: "/zh-tw/",
-    "zh-cn": "/zh-cn/",
-    ja: "/ja/",
-    ko: "/ko/"
-  };
+  const BASE_PATH = window.location.pathname.includes("/syncora-2")
+  ? "/syncora-2"
+  : "";
+
+const routeMap = {
+  en: `${BASE_PATH}/`,
+  zh: `${BASE_PATH}/zh-tw/`,
+  "zh-cn": `${BASE_PATH}/zh-cn/`,
+  ja: `${BASE_PATH}/ja/`,
+  ko: `${BASE_PATH}/ko/`
+};
 
   const buttons = document.querySelectorAll("[data-lang]");
   const menu = document.querySelector("[data-lang-menu]");
