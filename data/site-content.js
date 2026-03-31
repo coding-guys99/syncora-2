@@ -65,7 +65,7 @@ export const siteContent = {
 
     "concept.eyebrow": "核心概念",
     "concept.title":
-      "我們不生成新的 AI 角色，而是讓你的真人素材變成可重複使用的數字人系統",
+      "我們不生成新的 AI 角色，而是讓你的真人素材變成可重複使用的數位分身系統",
     "concept.card1Title": "真人素材建立",
     "concept.card1Desc": "以既有拍攝素材建立固定形象，保留你的外觀與辨識度。",
     "concept.card2Title": "聲音驅動對嘴",
@@ -74,7 +74,7 @@ export const siteContent = {
     "concept.card3Desc": "可延伸至內容產出、品牌人物口播與整合型交付場景。",
 
     "modules.eyebrow": "服務模組",
-    "modules.title": "將數字人能力拆分為核心模組，對應不同使用需求",
+    "modules.title": "將數位分身能力拆分為核心模組，對應不同使用需求",
     "modules.card1Title": "數位分身模板",
     "modules.card1Desc": "建立可持續使用的數位分身形象，用於內容或系統應用。",
     "modules.card2Title": "聲音驅動對嘴",
@@ -123,7 +123,7 @@ export const siteContent = {
 
     "requirements.eyebrow": "素材需求",
     "requirements.title": "只需要一段影片，就可以開始",
-    "requirements.subtitle": "我們會先幫你評估素材是否適合建立數字人模板",
+    "requirements.subtitle": "我們會先幫你評估素材是否適合建立數位分身模板",
     "requirements.card1Title": "📸 正面拍攝",
     "requirements.card1Desc": "人物正面，嘴部清楚可見",
     "requirements.card2Title": "💡 穩定光線",
