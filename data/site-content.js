@@ -1,158 +1,140 @@
 export const siteContent = {
   "zh": {
-    metaTitle: "SyncoraX — 數位分身對嘴系統",
-    metaDescription:
-      "SyncoraX 數位分身對嘴系統。以真人素材建立固定形象數位分身，透過聲音驅動對嘴輸出，適用於內容產出與系統整合。",
+  metaTitle: "SyncoraX — AI 數位分身對嘴系統",
+  metaDescription:
+    "SyncoraX AI 數位分身系統，透過真人影片建立專屬分身，搭配聲音自動對嘴，快速產出穩定的口播影片，適用內容製作與系統整合。",
 
-    "nav.demo": "示範",
-    "nav.modules": "模組",
-    "nav.solutions": "解決方案",
-    "nav.specs": "規格",
-    "nav.contact": "聯絡我們",
-    "nav.bookDemo": "預約示範",
+  "nav.demo": "示範",
+  "nav.modules": "功能模組",
+  "nav.solutions": "應用方案",
+  "nav.specs": "系統規格",
+  "nav.contact": "聯絡我們",
+  "nav.bookDemo": "預約 Demo",
 
-    "hero.eyebrow": "AI 對嘴系統",
-    "hero.titleLine1": "將一支影片轉換為",
-    "hero.titleLine2": "可擴展的口播內容",
-    "hero.subtitle":
-      "將真人影片轉換為可重複使用的數位分身模板，透過聲音驅動對嘴，持續產出穩定的口播內容。",
-    "hero.meta1": "固定形象",
-    "hero.meta2": "聲音驅動",
-    "hero.meta3": "可直接輸出",
-    "hero.languagesLabel": "支援語言",
-    "hero.lang1": "中文",
-    "hero.lang2": "English",
-    "hero.lang3": "粵語",
-    "hero.lang4": "日本語",
-    "hero.lang5": "한국어",
-    "hero.watchDemo": "觀看 Demo",
-    "hero.contact": "聯絡諮詢",
-    "hero.audienceLabel": "適用對象",
-    "hero.audienceText": "B2B 系統整合｜個人 IP 內容應用",
-    "hero.visualTop1": "對嘴運行中",
-    "hero.visualTop2": "語音輸入",
-    "hero.visualTop3": "輸出完成",
-    "hero.hud1": "固定形象",
-    "hero.hud2": "即時驅動",
-    "hero.hud3": "追蹤就緒",
-    "hero.hud4": "內容循環",
-    "hero.footer1Label": "來源",
-    "hero.footer1Value": "真人素材",
-    "hero.footer2Label": "音訊",
-    "hero.footer2Value": "聲音驅動",
-    "hero.footer3Label": "輸出",
-    "hero.footer3Value": "數位分身口播",
+  "hero.eyebrow": "AI 對嘴技術",
+  "hero.titleLine1": "把一支影片變成",
+  "hero.titleLine2": "可以一直用的口播分身",
+  "hero.subtitle":
+    "只要一段真人影片，就能建立專屬數位分身，透過聲音自動對嘴，持續產出穩定的口播內容。",
+  "hero.meta1": "固定人物",
+  "hero.meta2": "聲音控制",
+  "hero.meta3": "直接產出影片",
 
-    "demo.eyebrow": "運作方式",
-    "demo.title": "以真人素材建立固定形象數位分身，透過音訊驅動完成對嘴輸出",
-    "demo.subtitle":
-      "從素材、聲音到輸出，完整流程一目了然。不生成新角色，而是延伸既有形象。",
-    "demo.flow1": "素材",
-    "demo.flow2": "聲音",
-    "demo.flow3": "輸出",
-    "demo.card1Label": "01 · 素材影片",
-    "demo.card1Title": "真人素材",
-    "demo.card1Status": "已準備",
-    "demo.card1Desc": "以真人拍攝素材作為固定形象來源，不重新生成陌生角色。",
-    "demo.card2Label": "02 · 聲音輸入",
-    "demo.card2Title": "聲音輸入",
-    "demo.card2Status": "處理中",
-    "demo.card2Desc": "以音訊驅動嘴型變化，讓既有形象持續產出新的口播內容。",
-    "demo.card3Label": "03 · 最終輸出",
-    "demo.card3Title": "最終輸出",
-    "demo.card3Status": "輸出完成",
-    "demo.card3Desc": "可應用於內容製作、人物口播、企業交付與系統整合流程。",
+  "hero.watchDemo": "看 Demo",
+  "hero.contact": "聯絡我們",
 
-    "concept.eyebrow": "核心概念",
-    "concept.title":
-      "我們不生成新的 AI 角色，而是讓你的真人素材變成可重複使用的數位分身系統",
-    "concept.card1Title": "真人素材建立",
-    "concept.card1Desc": "以既有拍攝素材建立固定形象，保留你的外觀與辨識度。",
-    "concept.card2Title": "聲音驅動對嘴",
-    "concept.card2Desc": "用音訊驅動嘴型變化，完成穩定可重複使用的輸出流程。",
-    "concept.card3Title": "內容輸出應用",
-    "concept.card3Desc": "可延伸至內容產出、品牌人物口播與整合型交付場景。",
+  "hero.audienceLabel": "適合對象",
+  "hero.audienceText": "企業系統整合｜個人品牌經營",
 
-    "modules.eyebrow": "服務模組",
-    "modules.title": "將數位分身能力拆分為核心模組，對應不同使用需求",
-    "modules.card1Title": "數位分身模板",
-    "modules.card1Desc": "建立可持續使用的數位分身形象，用於內容或系統應用。",
-    "modules.card2Title": "聲音驅動對嘴",
-    "modules.card2Desc": "透過聲音驅動嘴型輸出，完成可控的口播流程。",
-    "modules.card3Title": "系統整合",
-    "modules.card3Desc": "可搭配既有系統流程整合，滿足交付與應用需求。",
-    "modules.card4Title": "內容輸出",
-    "modules.card4Desc": "適用於品牌內容、個人 IP 口播與示範型輸出場景。",
+  "hero.footer1Label": "來源",
+  "hero.footer1Value": "真人影片",
+  "hero.footer2Label": "驅動方式",
+  "hero.footer2Value": "聲音控制",
+  "hero.footer3Label": "結果",
+  "hero.footer3Value": "自動對嘴影片",
 
-    "solutions.eyebrow": "合作方式",
-    "solutions.title": "針對不同客戶需求，提供不同交付方式",
-    "solutions.card1Title": "適用於影像系統 / 攝影棚",
-    "solutions.card1Desc":
-      "提供數位分身模板建立與系統整合，適用於影像系統、虛擬攝影棚或內容自動化流程。",
-    "solutions.card1Cta": "預約示範",
-    "solutions.card2Title": "適用於個人品牌 / 內容創作者",
-    "solutions.card2Desc":
-      "建立你的數位分身形象，持續產出口播內容，適用於短影音、自媒體與品牌經營。",
-    "solutions.card2Cta": "立即聯絡",
+  "demo.eyebrow": "怎麼運作",
+  "demo.title": "用真人影片建立分身，透過聲音自動生成對嘴影片",
+  "demo.subtitle":
+    "從素材、聲音到成品，流程簡單清楚。不需要重新生成角色，直接延伸原本的你。",
 
-    "workflow.eyebrow": "三步驟流程",
-    "workflow.title": "從素材到輸出，流程簡單清楚",
-    "workflow.card1Title": "拍攝約 1 分鐘素材",
-    "workflow.card1Desc": "提供真人拍攝素材，建立固定形象的基礎來源。",
-    "workflow.card2Title": "建立數位分身模板",
-    "workflow.card2Desc": "整理素材並建立可持續使用的模板角色。",
-    "workflow.card3Title": "輸出對嘴影片",
-    "workflow.card3Desc": "透過音訊驅動完成口播影片輸出與應用。",
+  "demo.flow1": "素材",
+  "demo.flow2": "聲音",
+  "demo.flow3": "影片",
 
-    "specs.eyebrow": "系統規格",
-    "specs.title": "功能範圍清楚說明，避免錯誤期待",
-    "specs.supportedTitle": "支援功能",
-    "specs.supported1": "固定形象",
-    "specs.supported2": "聲音驅動對嘴",
-    "specs.supported3": "可重複使用",
-    "specs.supported4": "系統整合",
-    "specs.supported5": "內容輸出",
-    "specs.supported6": "支援中文、英文、粵語、日文、韓文",
-    "specs.notIncludedTitle": "不包含",
-    "specs.notIncluded1": "不支援換臉",
-    "specs.notIncluded2": "不支援更換服裝",
-    "specs.notIncluded3": "無眨眼",
-    "specs.notIncluded4": "無肢體動作",
-    "specs.notIncluded5": "長影片為循環",
-    "specs.note": "最終效果依素材品質而定，建議先提供測試素材評估。",
+  "demo.card1Title": "真人影片",
+  "demo.card1Desc": "使用真人拍攝影片，建立專屬分身，不會生成陌生人物。",
+  
+  "demo.card2Title": "聲音輸入",
+  "demo.card2Desc": "透過聲音自動帶動嘴型，讓影片可以一直重複使用。",
+  
+  "demo.card3Title": "完成影片",
+  "demo.card3Desc": "可用於內容製作、品牌影片或系統整合應用。",
 
-    "requirements.eyebrow": "素材需求",
-    "requirements.title": "只需要一段影片，就可以開始",
-    "requirements.subtitle": "我們會先幫你評估素材是否適合建立數位分身模板",
-    "requirements.card1Title": "📸 正面拍攝",
-    "requirements.card1Desc": "人物正面，嘴部清楚可見",
-    "requirements.card2Title": "💡 穩定光線",
-    "requirements.card2Desc": "避免過暗或強烈陰影",
-    "requirements.card3Title": "🎥 穩定畫面",
-    "requirements.card3Desc": "避免晃動或鏡頭切換",
-    "requirements.card4Title": "⏱ 約 1 分鐘",
-    "requirements.card4Desc": "可循環使用建立模板",
-    "requirements.note": "不確定素材是否適合？直接傳給我們幫你評估。",
-    "requirements.specs": "建議格式：MP4 / MOV ・1080p 以上 ・單人畫面",
-"requirements.ctaUpload": "📤 上傳素材給我們評估",
-"requirements.ctaOr": "或",
-"requirements.ctaWhatsapp": "WhatsApp 傳送",
-"requirements.trust": "🔒 素材僅用於評估與建模，不會公開或轉用",
+  "concept.title":
+    "我們不是生成新的 AI 人物，而是讓你的真人影片變成可以一直使用的數位分身",
 
-    "cta.eyebrow": "準備建立你的數位分身了嗎？",
-    "cta.title": "從你的素材開始",
-    "cta.subtitle":
-      "先提供素材，我們會評估是否適合建立數位分身模板，並提供對應方案。",
-    "cta.bookDemo": "預約示範",
-    "cta.contactNow": "立即聯絡",
-    "cta.whatsapp": "WhatsApp",
-    "cta.emailUs": "郵箱",
-    "cta.support": "客服",
+  "concept.card1Title": "真人分身建立",
+  "concept.card1Desc": "保留原本的樣子與辨識度，建立專屬人物。",
+  
+  "concept.card2Title": "聲音自動對嘴",
+  "concept.card2Desc": "用聲音直接控制嘴型，快速生成影片。",
+  
+  "concept.card3Title": "持續產出內容",
+  "concept.card3Desc": "可應用在內容製作、品牌經營與商業用途。",
 
-    "footer.subtitle": "數位分身對嘴系統",
-    "footer.copyright": "© 2026 SyncoraX. 保留所有權利"
-  },
+  "modules.title": "依需求提供不同功能模組",
 
+  "modules.card1Title": "數位分身建立",
+  "modules.card1Desc": "建立可長期使用的分身人物。",
+  
+  "modules.card2Title": "聲音對嘴系統",
+  "modules.card2Desc": "透過聲音快速生成對嘴影片。",
+  
+  "modules.card3Title": "系統整合",
+  "modules.card3Desc": "可整合到既有影像或自動化流程。",
+  
+  "modules.card4Title": "內容製作",
+  "modules.card4Desc": "用於短影音、品牌內容或展示影片。",
+
+  "solutions.title": "依不同需求提供合作方式",
+
+  "solutions.card1Title": "影像系統 / 攝影棚",
+  "solutions.card1Desc":
+    "提供分身建立與系統整合，適合虛擬攝影棚與內容自動化。",
+  
+  "solutions.card2Title": "個人品牌 / 創作者",
+  "solutions.card2Desc":
+    "建立你的分身，持續產出短影音與口播內容。",
+
+  "workflow.title": "三個步驟完成",
+
+  "workflow.card1Title": "提供素材",
+  "workflow.card1Desc": "拍攝約 1 分鐘真人影片。",
+  
+  "workflow.card2Title": "建立分身",
+  "workflow.card2Desc": "我們協助建立可重複使用的分身。",
+  
+  "workflow.card3Title": "產出影片",
+  "workflow.card3Desc": "透過聲音快速生成對嘴影片。",
+
+  "specs.title": "功能說明",
+
+  "specs.supportedTitle": "支援功能",
+  "specs.supported1": "固定人物分身",
+  "specs.supported2": "聲音自動對嘴",
+  "specs.supported3": "可重複使用",
+  "specs.supported4": "系統整合",
+  "specs.supported5": "影片產出",
+  
+  "specs.notIncludedTitle": "目前不支援",
+  "specs.notIncluded1": "換臉功能",
+  "specs.notIncluded2": "更換服裝",
+  "specs.notIncluded3": "眨眼動畫",
+  "specs.notIncluded4": "肢體動作",
+  "specs.notIncluded5": "長影片（以循環呈現）",
+
+  "requirements.title": "只需要一段影片就能開始",
+  "requirements.subtitle": "我們會先幫你評估是否適合建立分身",
+
+  "requirements.card1Title": "📸 正面拍攝",
+  "requirements.card1Desc": "臉部清楚、嘴型可見",
+  
+  "requirements.card2Title": "💡 光線穩定",
+  "requirements.card2Desc": "避免過暗或強烈陰影",
+  
+  "requirements.card3Title": "🎥 畫面穩定",
+  "requirements.card3Desc": "避免晃動或切換鏡頭",
+  
+  "requirements.card4Title": "⏱ 約 1 分鐘",
+  "requirements.card4Desc": "可用來建立分身",
+
+  "cta.title": "從你的影片開始",
+  "cta.subtitle":
+    "先提供素材，我們會幫你評估並提供建議方案。",
+
+  "footer.subtitle": "AI 數位分身對嘴系統",
+},
   "en": {
     metaTitle: "SyncoraX — Digital Human Lip Sync System",
     metaDescription:
