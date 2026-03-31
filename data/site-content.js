@@ -1,5 +1,5 @@
 export const siteContent = {
-  "zh": {
+  "zh-TW": {
     metaTitle: "SyncoraX — 數字人對嘴系統",
     metaDescription:
       "SyncoraX 數字人對嘴系統。以真人素材建立固定形象數字人，透過聲音驅動對嘴輸出，適用於內容產出與系統整合。",
@@ -22,7 +22,7 @@ export const siteContent = {
     "hero.languagesLabel": "支援語言",
     "hero.lang1": "中文",
     "hero.lang2": "English",
-    "hero.lang3": "廣東話",
+    "hero.lang3": "粵語",
     "hero.lang4": "日本語",
     "hero.lang5": "한국어",
     "hero.watchDemo": "觀看 Demo",
@@ -121,14 +121,27 @@ export const siteContent = {
     "specs.notIncluded5": "長影片為循環",
     "specs.note": "最終效果依素材品質而定，建議先提供測試素材評估。",
 
+    "requirements.eyebrow": "素材需求",
+    "requirements.title": "只需要一段影片，就可以開始",
+    "requirements.subtitle": "我們會先幫你評估素材是否適合建立數字人模板",
+    "requirements.card1Title": "📸 正面拍攝",
+    "requirements.card1Desc": "人物正面，嘴部清楚可見",
+    "requirements.card2Title": "💡 穩定光線",
+    "requirements.card2Desc": "避免過暗或強烈陰影",
+    "requirements.card3Title": "🎥 穩定畫面",
+    "requirements.card3Desc": "避免晃動或鏡頭切換",
+    "requirements.card4Title": "⏱ 約 1 分鐘",
+    "requirements.card4Desc": "可循環使用建立模板",
+    "requirements.note": "不確定素材是否適合？直接傳給我們幫你評估。",
+
     "cta.eyebrow": "準備建立你的數字人了嗎？",
     "cta.title": "從你的素材開始",
-    "cta.hint":
+    "cta.subtitle":
       "先提供素材，我們會評估是否適合建立數字人模板，並提供對應方案。",
     "cta.bookDemo": "預約示範",
     "cta.contactNow": "立即聯絡",
     "cta.whatsapp": "WhatsApp",
-    "cta.emailUs": "郵箱",
+    "cta.emailUs": "Email",
     "cta.support": "客服",
 
     "footer.subtitle": "數字人對嘴系統",
@@ -272,9 +285,24 @@ export const siteContent = {
     "specs.note":
       "Final quality depends on footage quality. Test footage evaluation is recommended first.",
 
+    "requirements.eyebrow": "FOOTAGE REQUIREMENTS",
+    "requirements.title": "Start with just one video",
+    "requirements.subtitle":
+      "We’ll evaluate whether your footage is suitable for building a digital human template",
+    "requirements.card1Title": "📸 Front-facing shot",
+    "requirements.card1Desc": "Face clearly visible with mouth in view",
+    "requirements.card2Title": "💡 Stable lighting",
+    "requirements.card2Desc": "Avoid low light or harsh shadows",
+    "requirements.card3Title": "🎥 Stable footage",
+    "requirements.card3Desc": "No camera shake or cuts",
+    "requirements.card4Title": "⏱ Around 1 minute",
+    "requirements.card4Desc": "Loopable for template creation",
+    "requirements.note":
+      "Not sure if your footage works? Send it to us for evaluation.",
+
     "cta.eyebrow": "READY TO BUILD YOUR DIGITAL HUMAN?",
     "cta.title": "Start With Your Footage",
-    "cta.hint":
+    "cta.subtitle":
       "Send us your footage first. We will evaluate whether it is suitable for building a digital human template and propose the right approach.",
     "cta.bookDemo": "Book Demo",
     "cta.contactNow": "Contact Now",
@@ -408,9 +436,22 @@ export const siteContent = {
     "specs.notIncluded5": "长视频为循环",
     "specs.note": "最终效果取决于素材质量，建议先提供测试素材评估。",
 
+    "requirements.eyebrow": "素材要求",
+    "requirements.title": "只需一段视频，即可开始",
+    "requirements.subtitle": "我们会先评估素材是否适合建立数字人模板",
+    "requirements.card1Title": "📸 正面拍摄",
+    "requirements.card1Desc": "人物正面，嘴部清晰可见",
+    "requirements.card2Title": "💡 稳定光线",
+    "requirements.card2Desc": "避免过暗或强烈阴影",
+    "requirements.card3Title": "🎥 稳定画面",
+    "requirements.card3Desc": "避免抖动或镜头切换",
+    "requirements.card4Title": "⏱ 约 1 分钟",
+    "requirements.card4Desc": "可循环使用以建立模板",
+    "requirements.note": "不确定素材是否适合？直接发送给我们帮你评估。",
+
     "cta.eyebrow": "准备打造你的数字人了吗？",
     "cta.title": "从你的素材开始",
-    "cta.hint":
+    "cta.subtitle":
       "先提供素材，我们会评估是否适合建立数字人模板，并提供对应方案。",
     "cta.bookDemo": "预约演示",
     "cta.contactNow": "立即联系",
@@ -544,9 +585,22 @@ export const siteContent = {
     "specs.notIncluded5": "긴 영상은 루프 방식",
     "specs.note": "최종 결과는 소스 품질에 따라 달라지며, 테스트 영상을 먼저 제공하는 것을 권장합니다.",
 
+    "requirements.eyebrow": "소스 영상 요구사항",
+    "requirements.title": "영상 하나로 시작할 수 있습니다",
+    "requirements.subtitle": "디지털 휴먼 템플릿 생성에 적합한지 사전 평가해드립니다",
+    "requirements.card1Title": "📸 정면 촬영",
+    "requirements.card1Desc": "얼굴이 정면이며 입이 명확하게 보여야 합니다",
+    "requirements.card2Title": "💡 안정적인 조명",
+    "requirements.card2Desc": "어둡거나 강한 그림자는 피해주세요",
+    "requirements.card3Title": "🎥 안정적인 영상",
+    "requirements.card3Desc": "흔들림이나 컷 전환 없이 촬영",
+    "requirements.card4Title": "⏱ 약 1분",
+    "requirements.card4Desc": "루프 가능하여 템플릿 제작에 적합",
+    "requirements.note": "적합한 영상인지 모르겠다면 보내주시면 평가해드립니다.",
+
     "cta.eyebrow": "디지털 휴먼을 시작할 준비가 되었나요?",
     "cta.title": "당신의 영상으로 시작하세요",
-    "cta.hint":
+    "cta.subtitle":
       "소스를 제공해 주시면 디지털 휴먼 생성 가능 여부를 평가하고 최적의 솔루션을 제안드립니다.",
     "cta.bookDemo": "데모 예약",
     "cta.contactNow": "지금 문의",
@@ -680,9 +734,22 @@ export const siteContent = {
     "specs.notIncluded5": "長尺はループ形式",
     "specs.note": "最終結果は素材品質に依存します。事前にテスト素材の提供を推奨します。",
 
+    "requirements.eyebrow": "素材要件",
+    "requirements.title": "1本の動画から始められます",
+    "requirements.subtitle": "素材がデジタルヒューマン構築に適しているか事前に評価します",
+    "requirements.card1Title": "📸 正面撮影",
+    "requirements.card1Desc": "顔が正面で口元がはっきり見えること",
+    "requirements.card2Title": "💡 安定した照明",
+    "requirements.card2Desc": "暗すぎや強い影は避けてください",
+    "requirements.card3Title": "🎥 安定した映像",
+    "requirements.card3Desc": "手ブレやカット編集なし",
+    "requirements.card4Title": "⏱ 約1分",
+    "requirements.card4Desc": "ループ可能でテンプレート作成に適しています",
+    "requirements.note": "素材が適しているか不明ですか？お気軽にお送りください。",
+
     "cta.eyebrow": "デジタルヒューマンを始めませんか？",
     "cta.title": "お持ちの素材からスタート",
-    "cta.hint":
+    "cta.subtitle":
       "素材をご提供いただければ、適用可否を評価し最適なプランをご提案します。",
     "cta.bookDemo": "デモ予約",
     "cta.contactNow": "今すぐお問い合わせ",
