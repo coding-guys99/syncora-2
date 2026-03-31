@@ -1,8 +1,8 @@
 export const siteContent = {
   "zh": {
-    metaTitle: "SyncoraX — 數字人對嘴系統",
+    metaTitle: "SyncoraX — 數位分身對嘴系統",
     metaDescription:
-      "SyncoraX 數字人對嘴系統。以真人素材建立固定形象數字人，透過聲音驅動對嘴輸出，適用於內容產出與系統整合。",
+      "SyncoraX 數位分身對嘴系統。以真人素材建立固定形象數位分身，透過聲音驅動對嘴輸出，適用於內容產出與系統整合。",
 
     "nav.demo": "示範",
     "nav.modules": "模組",
@@ -15,7 +15,7 @@ export const siteContent = {
     "hero.titleLine1": "將一支影片轉換為",
     "hero.titleLine2": "可擴展的口播內容",
     "hero.subtitle":
-      "將真人影片轉換為可重複使用的數字人模板，透過聲音驅動對嘴，持續產出穩定的口播內容。",
+      "將真人影片轉換為可重複使用的數位分身模板，透過聲音驅動對嘴，持續產出穩定的口播內容。",
     "hero.meta1": "固定形象",
     "hero.meta2": "聲音驅動",
     "hero.meta3": "可直接輸出",
@@ -41,10 +41,10 @@ export const siteContent = {
     "hero.footer2Label": "音訊",
     "hero.footer2Value": "聲音驅動",
     "hero.footer3Label": "輸出",
-    "hero.footer3Value": "數字人口播",
+    "hero.footer3Value": "數位分身口播",
 
     "demo.eyebrow": "運作方式",
-    "demo.title": "以真人素材建立固定形象數字人，透過音訊驅動完成對嘴輸出",
+    "demo.title": "以真人素材建立固定形象數位分身，透過音訊驅動完成對嘴輸出",
     "demo.subtitle":
       "從素材、聲音到輸出，完整流程一目了然。不生成新角色，而是延伸既有形象。",
     "demo.flow1": "素材",
@@ -75,8 +75,8 @@ export const siteContent = {
 
     "modules.eyebrow": "服務模組",
     "modules.title": "將數字人能力拆分為核心模組，對應不同使用需求",
-    "modules.card1Title": "數字人模板",
-    "modules.card1Desc": "建立可持續使用的數字人形象，用於內容或系統應用。",
+    "modules.card1Title": "數位分身模板",
+    "modules.card1Desc": "建立可持續使用的數位分身形象，用於內容或系統應用。",
     "modules.card2Title": "聲音驅動對嘴",
     "modules.card2Desc": "透過聲音驅動嘴型輸出，完成可控的口播流程。",
     "modules.card3Title": "系統整合",
@@ -88,18 +88,18 @@ export const siteContent = {
     "solutions.title": "針對不同客戶需求，提供不同交付方式",
     "solutions.card1Title": "適用於影像系統 / 攝影棚",
     "solutions.card1Desc":
-      "提供數字人模板建立與系統整合，適用於影像系統、虛擬攝影棚或內容自動化流程。",
+      "提供數位分身模板建立與系統整合，適用於影像系統、虛擬攝影棚或內容自動化流程。",
     "solutions.card1Cta": "預約示範",
     "solutions.card2Title": "適用於個人品牌 / 內容創作者",
     "solutions.card2Desc":
-      "建立你的數字人形象，持續產出口播內容，適用於短影音、自媒體與品牌經營。",
+      "建立你的數位分身形象，持續產出口播內容，適用於短影音、自媒體與品牌經營。",
     "solutions.card2Cta": "立即聯絡",
 
     "workflow.eyebrow": "三步驟流程",
     "workflow.title": "從素材到輸出，流程簡單清楚",
     "workflow.card1Title": "拍攝約 1 分鐘素材",
     "workflow.card1Desc": "提供真人拍攝素材，建立固定形象的基礎來源。",
-    "workflow.card2Title": "建立數字人模板",
+    "workflow.card2Title": "建立數位分身模板",
     "workflow.card2Desc": "整理素材並建立可持續使用的模板角色。",
     "workflow.card3Title": "輸出對嘴影片",
     "workflow.card3Desc": "透過音訊驅動完成口播影片輸出與應用。",
@@ -139,17 +139,17 @@ export const siteContent = {
 "requirements.ctaWhatsapp": "WhatsApp 傳送",
 "requirements.trust": "🔒 素材僅用於評估與建模，不會公開或轉用",
 
-    "cta.eyebrow": "準備建立你的數字人了嗎？",
+    "cta.eyebrow": "準備建立你的數位分身了嗎？",
     "cta.title": "從你的素材開始",
     "cta.subtitle":
-      "先提供素材，我們會評估是否適合建立數字人模板，並提供對應方案。",
+      "先提供素材，我們會評估是否適合建立數位分身模板，並提供對應方案。",
     "cta.bookDemo": "預約示範",
     "cta.contactNow": "立即聯絡",
     "cta.whatsapp": "WhatsApp",
-    "cta.emailUs": "Email",
+    "cta.emailUs": "郵箱",
     "cta.support": "客服",
 
-    "footer.subtitle": "數字人對嘴系統",
+    "footer.subtitle": "數位分身對嘴系統",
     "footer.copyright": "© 2026 SyncoraX. 保留所有權利"
   },
 
