@@ -1,5 +1,5 @@
 export const siteContent = {
-  "zh-TW": {
+  "zh": {
     metaTitle: "SyncoraX — 數字人對嘴系統",
     metaDescription:
       "SyncoraX 數字人對嘴系統。以真人素材建立固定形象數字人，透過聲音驅動對嘴輸出，適用於內容產出與系統整合。",
@@ -324,7 +324,7 @@ export const siteContent = {
     "footer.copyright": "© 2026 SyncoraX. All rights reserved."
   },
 
-  "zh-CN": {
+  "zh-cn": {
     metaTitle: "SyncoraX — 数字人对嘴系统",
     metaDescription:
       "SyncoraX 数字人对嘴系统。以真人素材建立固定形象数字人，通过声音驱动对嘴输出，适用于内容生产与系统集成。",
