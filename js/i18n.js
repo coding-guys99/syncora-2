@@ -1,7 +1,7 @@
 import { siteContent } from "../data/site-content.js";
 
 const STORAGE_KEY = "syncora-lang";
-const DEFAULT_LANG = "zh";
+const DEFAULT_LANG = "en";
 
 const languageLabels = {
   zh: "繁體中文",
