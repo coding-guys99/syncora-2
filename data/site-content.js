@@ -272,25 +272,25 @@ export const siteContent = {
     "specs.note":
       "Final quality depends on footage quality. Test footage evaluation is recommended first.",
 
-    "requirements.eyebrow": "FOOTAGE REQUIREMENTS",
-    "requirements.title": "Start with just one video",
-    "requirements.subtitle":
-      "We’ll evaluate whether your footage is suitable for building a digital human template",
-    "requirements.card1Title": "📸 Front-facing shot",
-    "requirements.card1Desc": "Face clearly visible with mouth in view",
-    "requirements.card2Title": "💡 Stable lighting",
-    "requirements.card2Desc": "Avoid low light or harsh shadows",
-    "requirements.card3Title": "🎥 Stable footage",
-    "requirements.card3Desc": "No camera shake or cuts",
-    "requirements.card4Title": "⏱ Around 1 minute",
-    "requirements.card4Desc": "Loopable for template creation",
-    "requirements.note":
-      "Not sure if your footage works? Send it to us for evaluation.",
-      "requirements.specs": "Recommended format: MP4 / MOV ・1080p+ ・Single-person frame",
-"requirements.ctaUpload": "📤 Upload Footage for Review",
-"requirements.ctaOr": "or",
-"requirements.ctaWhatsapp": "Send via WhatsApp",
-"requirements.trust": "🔒 Your footage is only used for evaluation and template building. It will not be published or reused.",
+    "req.eyebrow": "FOOTAGE REQUIREMENTS",
+"req.title": "Start with just one video",
+"req.subtitle": "We will evaluate whether your footage is suitable for building a digital human",
+
+"req.card1Title": "Front-facing shot",
+"req.card1Desc": "Face clearly visible with mouth movement",
+
+"req.card2Title": "Stable lighting",
+"req.card2Desc": "Avoid low light, backlight, or strong shadows",
+
+"req.card3Title": "Stable frame",
+"req.card3Desc": "Avoid camera shake or frequent cuts",
+
+"req.card4Title": "About 1 minute",
+"req.card4Desc": "Single subject recommended for looping",
+
+"req.format": "Recommended: MP4 / MOV ・ 1080p+ ・ single subject",
+"req.privacy": "🔒 Footage is only used for evaluation and modeling",
+"req.note": "Not sure if your footage works? Send it to us."
 
     "cta.eyebrow": "READY TO BUILD YOUR DIGITAL HUMAN?",
     "cta.title": "Start With Your Footage",
