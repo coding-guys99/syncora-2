@@ -23,15 +23,34 @@ function getLangFromUrl() {
 }
 
 function setDocumentLanguage(lang) {
-  if (lang === "en") return document.documentElement.lang = "en";
-  if (lang === "zh-cn") return document.documentElement.lang = "zh-CN";
-  if (lang === "ja") return document.documentElement.lang = "ja";
-  if (lang === "ko") return document.documentElement.lang = "ko";
+  if (lang === "en") {
+    document.documentElement.lang = "en";
+    return;
+  }
+
+  if (lang === "zh-cn") {
+    document.documentElement.lang = "zh-CN";
+    return;
+  }
+
+  if (lang === "ja") {
+    document.documentElement.lang = "ja";
+    return;
+  }
+
+  if (lang === "ko") {
+    document.documentElement.lang = "ko";
+    return;
+  }
+
   document.documentElement.lang = "zh-Hant";
 }
 
 function updateMeta(dict) {
-  document.title = dict.metaTitle || document.title;
+  if (dict.metaTitle) {
+    document.title = dict.metaTitle;
+  }
+
   const metaDescription = getMetaDescriptionNode();
   if (metaDescription && dict.metaDescription) {
     metaDescription.setAttribute("content", dict.metaDescription);
@@ -41,8 +60,10 @@ function updateMeta(dict) {
 function updateTextNodes(dict) {
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
-    if (typeof dict[key] === "string") {
-      node.textContent = dict[key];
+    const value = dict[key];
+
+    if (typeof value === "string") {
+      node.textContent = value;
     }
   });
 }
@@ -53,7 +74,9 @@ function updateLanguageButtons(lang) {
   });
 
   const current = document.querySelector("[data-lang-current]");
-  if (current) current.textContent = languageLabels[lang] || "English";
+  if (current) {
+    current.textContent = languageLabels[lang] || languageLabels[DEFAULT_LANG];
+  }
 }
 
 export function applyLanguage(lang) {
@@ -66,34 +89,46 @@ export function applyLanguage(lang) {
   updateLanguageButtons(safeLang);
 }
 
-export function initI18n() {
-  const lang = getLangFromUrl();
-  applyLanguage(lang);
-
+function initLanguageDropdown() {
   const menu = document.querySelector("[data-lang-menu]");
   const trigger = document.querySelector("[data-lang-trigger]");
 
-  if (menu && trigger) {
-    trigger.addEventListener("click", (event) => {
-      event.stopPropagation();
-      const isOpen = menu.classList.toggle("is-open");
-      trigger.setAttribute("aria-expanded", String(isOpen));
-    });
+  if (!menu || !trigger) return;
 
-    document.addEventListener("click", (event) => {
-      if (!menu.contains(event.target)) {
-        menu.classList.remove("is-open");
-        trigger.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
+  trigger.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const isOpen = menu.classList.toggle("is-open");
+    trigger.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!menu.contains(event.target)) {
+      menu.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      menu.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+export function initI18n() {
+  const lang = getLangFromUrl();
+  applyLanguage(lang);
+  initLanguageDropdown();
 
   document.querySelectorAll("[data-lang]").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const lang = btn.dataset.lang;
+      const targetLang = btn.dataset.lang;
       const url = new URL(window.location.href);
+
       url.pathname = "/syncora-2/";
-      url.searchParams.set("lang", lang);
+      url.searchParams.set("lang", targetLang);
+
       window.location.href = url.toString();
     });
   });
