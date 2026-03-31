@@ -17,10 +17,10 @@ function getMetaDescriptionNode() {
 function getLangFromPath() {
   const path = window.location.pathname.toLowerCase();
 
-  if (path.startsWith("/zh-tw")) return "zh";
-  if (path.startsWith("/zh-cn")) return "zh-cn";
-  if (path.startsWith("/ja")) return "ja";
-  if (path.startsWith("/ko")) return "ko";
+  if (path.startsWith("syncora-2/zh-tw")) return "zh";
+  if (path.startsWith("syncora-2/zh-cn")) return "zh-cn";
+  if (path.startsWith("syncora-2/ja")) return "ja";
+  if (path.startsWith("syncora-2/ko")) return "ko";
   return "en";
 }
 
