@@ -14,44 +14,24 @@ function getMetaDescriptionNode() {
   return document.querySelector('meta[name="description"]');
 }
 
-function getLangFromPath() {
-  const path = window.location.pathname.toLowerCase();
+function getLangFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const lang = params.get("lang");
 
-  if (path.includes("/zh-tw/")) return "zh";
-  if (path.includes("/zh-cn/")) return "zh-cn";
-  if (path.includes("/ja/")) return "ja";
-  if (path.includes("/ko/")) return "ko";
-
-  return "en";
+  if (lang && siteContent[lang]) return lang;
+  return DEFAULT_LANG;
 }
 
 function setDocumentLanguage(lang) {
-  if (lang === "en") {
-    document.documentElement.lang = "en";
-    return;
-  }
-
-  if (lang === "zh-cn") {
-    document.documentElement.lang = "zh-CN";
-    return;
-  }
-
-  if (lang === "ja") {
-    document.documentElement.lang = "ja";
-    return;
-  }
-
-  if (lang === "ko") {
-    document.documentElement.lang = "ko";
-    return;
-  }
-
+  if (lang === "en") return document.documentElement.lang = "en";
+  if (lang === "zh-cn") return document.documentElement.lang = "zh-CN";
+  if (lang === "ja") return document.documentElement.lang = "ja";
+  if (lang === "ko") return document.documentElement.lang = "ko";
   document.documentElement.lang = "zh-Hant";
 }
 
 function updateMeta(dict) {
   document.title = dict.metaTitle || document.title;
-
   const metaDescription = getMetaDescriptionNode();
   if (metaDescription && dict.metaDescription) {
     metaDescription.setAttribute("content", dict.metaDescription);
@@ -59,28 +39,21 @@ function updateMeta(dict) {
 }
 
 function updateTextNodes(dict) {
-  const nodes = document.querySelectorAll("[data-i18n]");
-
-  nodes.forEach((node) => {
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
     const key = node.dataset.i18n;
-    const value = dict[key];
-    if (typeof value === "string") {
-      node.textContent = value;
+    if (typeof dict[key] === "string") {
+      node.textContent = dict[key];
     }
   });
 }
 
 function updateLanguageButtons(lang) {
-  const buttons = document.querySelectorAll("[data-lang]");
-
-  buttons.forEach((btn) => {
+  document.querySelectorAll("[data-lang]").forEach((btn) => {
     btn.classList.toggle("is-active", btn.dataset.lang === lang);
   });
 
   const current = document.querySelector("[data-lang-current]");
-  if (current) {
-    current.textContent = languageLabels[lang] || languageLabels[DEFAULT_LANG];
-  }
+  if (current) current.textContent = languageLabels[lang] || "English";
 }
 
 export function applyLanguage(lang) {
@@ -93,67 +66,35 @@ export function applyLanguage(lang) {
   updateLanguageButtons(safeLang);
 }
 
-function initLanguageDropdown() {
-  const menu = document.querySelector("[data-lang-menu]");
-  const trigger = document.querySelector("[data-lang-trigger]");
-
-  if (!menu || !trigger) return;
-
-  trigger.addEventListener("click", (event) => {
-    event.stopPropagation();
-    const isOpen = menu.classList.toggle("is-open");
-    trigger.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!menu.contains(event.target)) {
-      menu.classList.remove("is-open");
-      trigger.setAttribute("aria-expanded", "false");
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      menu.classList.remove("is-open");
-      trigger.setAttribute("aria-expanded", "false");
-    }
-  });
-}
-
 export function initI18n() {
-  const lang = getLangFromPath();
+  const lang = getLangFromUrl();
   applyLanguage(lang);
-  initLanguageDropdown();
 
-  const BASE_PATH = window.location.pathname.includes("/syncora-2")
-  ? "/syncora-2"
-  : "";
-
-const routeMap = {
-  en: `${BASE_PATH}/`,
-  zh: `${BASE_PATH}/zh-tw/`,
-  "zh-cn": `${BASE_PATH}/zh-cn/`,
-  ja: `${BASE_PATH}/ja/`,
-  ko: `${BASE_PATH}/ko/`
-};
-
-  const buttons = document.querySelectorAll("[data-lang]");
   const menu = document.querySelector("[data-lang-menu]");
   const trigger = document.querySelector("[data-lang-trigger]");
-
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const targetLang = btn.dataset.lang;
-      window.location.href = routeMap[targetLang] || "/";
-    });
-  });
 
   if (menu && trigger) {
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", () => {
+    trigger.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const isOpen = menu.classList.toggle("is-open");
+      trigger.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!menu.contains(event.target)) {
         menu.classList.remove("is-open");
         trigger.setAttribute("aria-expanded", "false");
-      });
+      }
     });
   }
+
+  document.querySelectorAll("[data-lang]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const lang = btn.dataset.lang;
+      const url = new URL(window.location.href);
+      url.pathname = "/syncora-2/";
+      url.searchParams.set("lang", lang);
+      window.location.href = url.toString();
+    });
+  });
 }
