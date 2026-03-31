@@ -114,20 +114,25 @@ export const siteContent = {
   "specs.notIncluded4": "肢體動作",
   "specs.notIncluded5": "長影片（以循環呈現）",
 
-  "requirements.title": "只需要一段影片就能開始",
-  "requirements.subtitle": "我們會先幫你評估是否適合建立分身",
+  "req.eyebrow": "素材需求",
+"req.title": "只要一段影片，就能開始",
+"req.subtitle": "我們會先協助評估素材是否適合建立數位人模板",
 
-  "requirements.card1Title": "📸 正面拍攝",
-  "requirements.card1Desc": "臉部清楚、嘴型可見",
-  
-  "requirements.card2Title": "💡 光線穩定",
-  "requirements.card2Desc": "避免過暗或強烈陰影",
-  
-  "requirements.card3Title": "🎥 畫面穩定",
-  "requirements.card3Desc": "避免晃動或切換鏡頭",
-  
-  "requirements.card4Title": "⏱ 約 1 分鐘",
-  "requirements.card4Desc": "可用來建立分身",
+"req.card1Title": "正面拍攝",
+"req.card1Desc": "建議人物正面入鏡，臉部清楚、嘴型可見",
+
+"req.card2Title": "光線穩定",
+"req.card2Desc": "避免畫面過暗、逆光或明顯陰影",
+
+"req.card3Title": "畫面穩定",
+"req.card3Desc": "避免手震、快速移動或頻繁切鏡",
+
+"req.card4Title": "約 1 分鐘",
+"req.card4Desc": "建議單人畫面，方便後續建立模板",
+
+"req.format": "建議格式：MP4 / MOV ・ 1080p 以上 ・ 單人畫面",
+"req.privacy": "🔒 素材僅用於評估與建模，不會公開或另作他用",
+"req.note": "不確定素材是否適合？直接傳給我們，我們可以先幫你評估。"
 
   "cta.title": "從你的影片開始",
   "cta.subtitle":
@@ -290,7 +295,7 @@ export const siteContent = {
 
 "req.format": "Recommended: MP4 / MOV ・ 1080p+ ・ single subject",
 "req.privacy": "🔒 Footage is only used for evaluation and modeling",
-"req.note": "Not sure if your footage works? Send it to us."
+"req.note": "Not sure if your footage works? Send it to us.",
 
     "cta.eyebrow": "READY TO BUILD YOUR DIGITAL HUMAN?",
     "cta.title": "Start With Your Footage",
@@ -428,23 +433,25 @@ export const siteContent = {
     "specs.notIncluded5": "长视频为循环",
     "specs.note": "最终效果取决于素材质量，建议先提供测试素材评估。",
 
-    "requirements.eyebrow": "素材要求",
-    "requirements.title": "只需一段视频，即可开始",
-    "requirements.subtitle": "我们会先评估素材是否适合建立数字人模板",
-    "requirements.card1Title": "📸 正面拍摄",
-    "requirements.card1Desc": "人物正面，嘴部清晰可见",
-    "requirements.card2Title": "💡 稳定光线",
-    "requirements.card2Desc": "避免过暗或强烈阴影",
-    "requirements.card3Title": "🎥 稳定画面",
-    "requirements.card3Desc": "避免抖动或镜头切换",
-    "requirements.card4Title": "⏱ 约 1 分钟",
-    "requirements.card4Desc": "可循环使用以建立模板",
-    "requirements.note": "不确定素材是否适合？直接发送给我们帮你评估。",
-    "requirements.specs": "建议格式：MP4 / MOV ・1080p 以上 ・单人画面",
-"requirements.ctaUpload": "📤 上传素材给我们评估",
-"requirements.ctaOr": "或",
-"requirements.ctaWhatsapp": "通过 WhatsApp 发送",
-"requirements.trust": "🔒 素材仅用于评估与建模，不会公开或挪作他用",
+    "req.eyebrow": "素材要求",
+"req.title": "只需要一段视频即可开始",
+"req.subtitle": "我们会先评估素材是否适合建立数字人模板",
+
+"req.card1Title": "正面拍摄",
+"req.card1Desc": "人物正面，嘴部清晰可见",
+
+"req.card2Title": "光线稳定",
+"req.card2Desc": "避免过暗、逆光或强阴影",
+
+"req.card3Title": "画面稳定",
+"req.card3Desc": "避免晃动或频繁切换镜头",
+
+"req.card4Title": "约 1 分钟",
+"req.card4Desc": "建议单人画面，可用于循环建模",
+
+"req.format": "建议格式：MP4 / MOV ・ 1080p 以上 ・ 单人画面",
+"req.privacy": "🔒 素材仅用于评估与建模，不会公开或转用",
+"req.note": "不确定素材是否适合？直接发送给我们评估。",
 
     "cta.eyebrow": "准备打造你的数字人了吗？",
     "cta.title": "从你的素材开始",
@@ -582,23 +589,25 @@ export const siteContent = {
     "specs.notIncluded5": "긴 영상은 루프 방식",
     "specs.note": "최종 결과는 소스 품질에 따라 달라지며, 테스트 영상을 먼저 제공하는 것을 권장합니다.",
 
-    "requirements.eyebrow": "소스 영상 요구사항",
-    "requirements.title": "영상 하나로 시작할 수 있습니다",
-    "requirements.subtitle": "디지털 휴먼 템플릿 생성에 적합한지 사전 평가해드립니다",
-    "requirements.card1Title": "📸 정면 촬영",
-    "requirements.card1Desc": "얼굴이 정면이며 입이 명확하게 보여야 합니다",
-    "requirements.card2Title": "💡 안정적인 조명",
-    "requirements.card2Desc": "어둡거나 강한 그림자는 피해주세요",
-    "requirements.card3Title": "🎥 안정적인 영상",
-    "requirements.card3Desc": "흔들림이나 컷 전환 없이 촬영",
-    "requirements.card4Title": "⏱ 약 1분",
-    "requirements.card4Desc": "루프 가능하여 템플릿 제작에 적합",
-    "requirements.note": "적합한 영상인지 모르겠다면 보내주시면 평가해드립니다.",
-    "requirements.specs": "권장 형식: MP4 / MOV ・1080p 이상 ・1인 화면",
-"requirements.ctaUpload": "📤 영상 업로드하여 평가받기",
-"requirements.ctaOr": "또는",
-"requirements.ctaWhatsapp": "WhatsApp으로 보내기",
-"requirements.trust": "🔒 영상은 평가 및 템플릿 생성 용도로만 사용되며, 외부 공개 또는 다른 용도로 활용되지 않습니다.",
+    "req.eyebrow": "소재 조건",
+"req.title": "영상 한 개만 있으면 시작할 수 있습니다",
+"req.subtitle": "디지털 휴먼 템플릿 제작에 적합한 영상인지 먼저 확인해 드립니다",
+
+"req.card1Title": "정면 촬영",
+"req.card1Desc": "얼굴이 정면을 향하고 입 모양이 잘 보이는 영상이 좋습니다",
+
+"req.card2Title": "안정적인 조명",
+"req.card2Desc": "너무 어둡거나 역광, 강한 그림자는 피해주세요",
+
+"req.card3Title": "안정적인 화면",
+"req.card3Desc": "흔들림, 빠른 움직임, 잦은 장면 전환은 피해주세요",
+
+"req.card4Title": "약 1분",
+"req.card4Desc": "한 명이 나오는 영상을 권장하며 템플릿 제작에 적합합니다",
+
+"req.format": "권장 형식: MP4 / MOV ・ 1080p 이상 ・ 단일 인물",
+"req.privacy": "🔒 영상은 평가 및 모델링 용도로만 사용되며 공개하거나 다른 용도로 사용하지 않습니다",
+"req.note": "적합한 영상인지 잘 모르겠다면 그대로 보내주세요. 먼저 확인해 드립니다.",
 
     "cta.eyebrow": "디지털 휴먼을 시작할 준비가 되었나요?",
     "cta.title": "당신의 영상으로 시작하세요",
@@ -736,23 +745,25 @@ export const siteContent = {
     "specs.notIncluded5": "長尺はループ形式",
     "specs.note": "最終結果は素材品質に依存します。事前にテスト素材の提供を推奨します。",
 
-    "requirements.eyebrow": "素材要件",
-    "requirements.title": "1本の動画から始められます",
-    "requirements.subtitle": "素材がデジタルヒューマン構築に適しているか事前に評価します",
-    "requirements.card1Title": "📸 正面撮影",
-    "requirements.card1Desc": "顔が正面で口元がはっきり見えること",
-    "requirements.card2Title": "💡 安定した照明",
-    "requirements.card2Desc": "暗すぎや強い影は避けてください",
-    "requirements.card3Title": "🎥 安定した映像",
-    "requirements.card3Desc": "手ブレやカット編集なし",
-    "requirements.card4Title": "⏱ 約1分",
-    "requirements.card4Desc": "ループ可能でテンプレート作成に適しています",
-    "requirements.note": "素材が適しているか不明ですか？お気軽にお送りください。",
-    "requirements.specs": "推奨形式：MP4 / MOV ・1080p以上 ・単独人物の画面",
-"requirements.ctaUpload": "📤 素材を送って評価を受ける",
-"requirements.ctaOr": "または",
-"requirements.ctaWhatsapp": "WhatsAppで送信",
-"requirements.trust": "🔒 素材は評価およびテンプレート構築のためにのみ使用され、公開や転用は行いません。",
+    "req.eyebrow": "素材条件",
+"req.title": "1本の動画があれば始められます",
+"req.subtitle": "デジタルヒューマンのテンプレート化に適した素材か、事前に確認します",
+
+"req.card1Title": "正面からの撮影",
+"req.card1Desc": "顔が正面を向き、口元がはっきり見える素材が理想です",
+
+"req.card2Title": "安定した照明",
+"req.card2Desc": "暗すぎる映像、逆光、強い影は避けてください",
+
+"req.card3Title": "安定した画面",
+"req.card3Desc": "手ブレ、急な動き、頻繁なカットは避けてください",
+
+"req.card4Title": "約1分",
+"req.card4Desc": "1人が映っている映像を推奨します。テンプレート作成に適しています",
+
+"req.format": "推奨形式：MP4 / MOV ・ 1080p以上 ・ 単独被写体",
+"req.privacy": "🔒 素材は評価とモデリングのみに使用し、公開や転用は行いません",
+"req.note": "素材が適しているかわからない場合は、そのままお送りください。先に確認できます。"
 
     "cta.eyebrow": "デジタルヒューマンを始めませんか？",
     "cta.title": "お持ちの素材からスタート",
