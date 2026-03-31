@@ -1,12 +1,11 @@
 import { siteContent } from "../data/site-content.js";
 
-const STORAGE_KEY = "syncora-lang";
 const DEFAULT_LANG = "en";
 
 const languageLabels = {
   en: "English",
-  zh: "繁中",
-  "zh-cn": "简中",
+  zh: "繁體中文",
+  "zh-cn": "簡體中文",
   ja: "日本語",
   ko: "한국어"
 };
@@ -64,7 +63,6 @@ function updateTextNodes(dict) {
   nodes.forEach((node) => {
     const key = node.dataset.i18n;
     const value = dict[key];
-
     if (typeof value === "string") {
       node.textContent = value;
     }
@@ -92,13 +90,47 @@ export function applyLanguage(lang) {
   updateMeta(dict);
   updateTextNodes(dict);
   updateLanguageButtons(safeLang);
+}
 
-  localStorage.setItem(STORAGE_KEY, safeLang);
+function initLanguageDropdown() {
+  const menu = document.querySelector("[data-lang-menu]");
+  const trigger = document.querySelector("[data-lang-trigger]");
+
+  if (!menu || !trigger) return;
+
+  trigger.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const isOpen = menu.classList.toggle("is-open");
+    trigger.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!menu.contains(event.target)) {
+      menu.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      menu.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+    }
+  });
 }
 
 export function initI18n() {
-  const pathLang = getLangFromPath();
-  applyLanguage(pathLang);
+  const lang = getLangFromPath();
+  applyLanguage(lang);
+  initLanguageDropdown();
+
+  const routeMap = {
+    en: "/",
+    zh: "/zh-tw/",
+    "zh-cn": "/zh-cn/",
+    ja: "/ja/",
+    ko: "/ko/"
+  };
 
   const buttons = document.querySelectorAll("[data-lang]");
   const menu = document.querySelector("[data-lang-menu]");
@@ -106,39 +138,17 @@ export function initI18n() {
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const lang = btn.dataset.lang;
-
-      const routeMap = {
-        en: "/",
-        zh: "/zh-tw/",
-        "zh-cn": "/zh-cn/",
-        ja: "/ja/",
-        ko: "/ko/"
-      };
-
-      window.location.href = routeMap[lang] || "/";
+      const targetLang = btn.dataset.lang;
+      window.location.href = routeMap[targetLang] || "/";
     });
   });
 
   if (menu && trigger) {
-    trigger.addEventListener("click", (event) => {
-      event.stopPropagation();
-      const isOpen = menu.classList.toggle("is-open");
-      trigger.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    document.addEventListener("click", (event) => {
-      if (!menu.contains(event.target)) {
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
         menu.classList.remove("is-open");
         trigger.setAttribute("aria-expanded", "false");
-      }
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        menu.classList.remove("is-open");
-        trigger.setAttribute("aria-expanded", "false");
-      }
+      });
     });
   }
 }
